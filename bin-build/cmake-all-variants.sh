@@ -31,7 +31,7 @@ for BUILD_TYPE in $BUILD_TYPES; do
 	    fi
 	    CMAKE_PARAMETER="$CMAKE_PARAMETER $COMPONENT"
 	    echo "cmake execution: $CMAKE_EXECUTE $CMAKE_PARAMETER && cmake --build $BUILD_DIR --target all && cd $BUILD_DIR && BASE=$SRC_DIR ctest --output-on-failure"
-	    $CMAKE_EXECUTE $CMAKE_PARAMETER #&& cmake --build $BUILD_DIR --target all #&& cd $BUILD_DIR && BASE=$SRC_DIR ctest --output-on-failure
+	    $CMAKE_EXECUTE $CMAKE_PARAMETER && cmake --build $BUILD_DIR --target all #&& cd $BUILD_DIR && BASE=$SRC_DIR ctest --output-on-failure
 	    cd $CUR_DIR
 	    rm -fr $BUILD_DIR
 	    COMPONENT=""
@@ -53,7 +53,7 @@ for BUILD_TYPE in $BUILD_TYPES; do
 	fi
 	CMAKE_PARAMETER="$CMAKE_PARAMETER $COMPONENT"
 	echo "cmake execution: $CMAKE_EXECUTE $CMAKE_PARAMETER && cmake --build $BUILD_DIR --target all && cd $BUILD_DIR && BASE=$SRC_DIR ctest --output-on-failure"
-	$CMAKE_EXECUTE $CMAKE_PARAMETER #&& cmake --build $BUILD_DIR --target all #&& cd $BUILD_DIR && BASE=$SRC_DIR ctest --output-on-failure
+	$CMAKE_EXECUTE $CMAKE_PARAMETER && cmake --build $BUILD_DIR --target all #&& cd $BUILD_DIR && BASE=$SRC_DIR ctest --output-on-failure
 	cd $CUR_DIR
 	rm -fr $BUILD_DIR
 	COMPONENT=""
@@ -74,7 +74,7 @@ for BUILD_TYPE in $BUILD_TYPES; do
 	fi
 	CMAKE_PARAMETER="$CMAKE_PARAMETER $COMPONENT"
 	echo "cmake execution: $CMAKE_EXECUTE $CMAKE_PARAMETER && cmake --build $BUILD_DIR --target all && cd $BUILD_DIR && BASE=$SRC_DIR ctest --output-on-failure"
-	$CMAKE_EXECUTE $CMAKE_PARAMETER #&& cmake --build $BUILD_DIR --target all && cd $BUILD_DIR && BASE=$SRC_DIR ctest --output-on-failure
+	$CMAKE_EXECUTE $CMAKE_PARAMETER && cmake --build $BUILD_DIR --target all && cd $BUILD_DIR && BASE=$SRC_DIR ctest --output-on-failure
 	cd $CUR_DIR
 	rm -fr $BUILD_DIR
 	COMPONENT=""
