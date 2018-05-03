@@ -2,7 +2,7 @@
 
 SRC_DIR=/src/poco
 BUILD_DIR=/build/poco-docker
-CMAKE_EXECUTE="cmake -H$SRC_DIR -B$BUILD_DIR -GNinja -DCMAKE_C_COMPILER=clang-6.0 -DCMAKE_CXX_COMPILER=clang++-6.0 "
+CMAKE_EXECUTE="cmake -H$SRC_DIR -B$BUILD_DIR -GNinja -DCMAKE_C_COMPILER=clang-6.0 -DCMAKE_CXX_COMPILER=clang++-6.0" # -DCMAKE_VERBOSE_MAKEFILE=true"
 CUR_DIR=`pwd`
 BUILD_TYPES="Debug Release NONE"
 WITH_FEATURES="POCO_ENABLE_WSTRING POCO_ENABLE_FPENVIRONMENT POCO_ENABLE_POCODOC"
@@ -39,7 +39,7 @@ for BUILD_TYPE in $BUILD_TYPES; do
 	done    
     done
 done
-
+ 
 for BUILD_TYPE in $BUILD_TYPES; do
     for WITH_TYPE in $WITH_TYPES; do
 	for COPOFF in $COMPONENTS_OFF; do
@@ -74,7 +74,7 @@ for BUILD_TYPE in $BUILD_TYPES; do
 	fi
 	CMAKE_PARAMETER="$CMAKE_PARAMETER $COMPONENT"
 	echo "cmake execution: $CMAKE_EXECUTE $CMAKE_PARAMETER && cmake --build $BUILD_DIR --target all && cd $BUILD_DIR && POCO_BASE=$SRC_DIR ctest --output-on-failure"
-	$CMAKE_EXECUTE $CMAKE_PARAMETER #&& cmake --build $BUILD_DIR --target all && cd $BUILD_DIR && POCO_BASE=$SRC_DIR ctest --output-on-failure
+	$CMAKE_EXECUTE $CMAKE_PARAMETER && cmake --build $BUILD_DIR --target all && cd $BUILD_DIR && POCO_BASE=$SRC_DIR ctest --output-on-failure
 	cd $CUR_DIR
 	rm -fr $BUILD_DIR
 	COMPONENT=""
