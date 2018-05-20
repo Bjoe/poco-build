@@ -1,0 +1,7 @@
+version: '2'
+
+services:
+    buildandroidndk:
+        volumes:
+            - ".:/src"
+        entrypoint: /src/bin-build/android-develop.sh
