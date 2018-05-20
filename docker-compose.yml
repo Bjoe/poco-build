@@ -1,0 +1,106 @@
+version: '2'
+
+# SRC_DIR=.../Src BUILD_DIR=~/Build docker-compose -f DockerImages/docker-compose.yml run buildthirdparty bash
+
+#env_file: env/build.env
+
+services:
+    mysqldb:
+        image: mysql:5.6
+        environment:
+            MYSQL_USER: root
+            MYSQL_ROOT_PASSWORD: poco
+            MYSQL_DATABASE: pocotestdb
+        ports:
+            - "3306:3306"
+        networks:
+            - mynet
+
+    redisdb:
+        image: redis:4
+        ports:
+            - "6379:6379"
+        networks:
+            - mynet
+
+    mongodb:
+        image: mongo:3.4
+        ports:
+            - "27017:27017"
+        networks:
+            - mynet
+    
+    postgresdb:
+        image: postgres:9.4
+        environment:
+            POSTGRES_PASSWORD: postgres
+            POSTGRES_USER: postgres
+            POSTGRES_DB: postgres
+        ports:
+            - "5432:5432"
+        networks:
+            - mynet
+
+    buildthirdparty:
+        image: ubuntu-build-thirdparty:1.0
+        #volumes:
+            #- "${SRC_DIR}:/src"
+            #- "${BUILD_DIR}:/build"
+        #entrypoint: /src/bin-build/cmake-all-variants-develop.sh
+        environment:
+            MYSQL_HOST: "mysqldb"
+            POSTGRESQL_HOST: "postgresdb"
+            REDIS_HOST: "redisdb"
+            MONGODB_HOST: "mongodb"
+            POCO_TEST_POSTGRES_CONN: "DATABASE=postgres;SERVER=postgres;PORT=5432;"
+        depends_on:
+            - mysqldb
+            - redisdb
+            - postgresdb
+            - mongodb
+        networks:
+            - mynet
+
+    buildandroidndk:
+        image: ubuntu-build-android:1.0
+        #volumes:
+            #- "${SRC_DIR}:/src"
+            #- "${BUILD_DIR}:/build"
+        #entrypoint: /src/bin-build/android.sh
+        environment:
+            MYSQL_HOST: "mysqldb"
+            POSTGRESQL_HOST: "postgresdb"
+            REDIS_HOST: "redisdb"
+            MONGODB_HOST: "mongodb"
+            POCO_TEST_POSTGRES_CONN: "DATABASE=postgres;SERVER=postgres;PORT=5432;"
+        depends_on:
+            - mysqldb
+            - redisdb
+            - postgresdb
+            - mongodb
+        networks:
+            - mynet
+
+    build:
+        image: ubuntu-build:1.0
+        #volumes:
+            #- "${SRC_DIR}:/src"
+            #- "${BUILD_DIR}:/build"
+        #entrypoint: /src/bin-build/docker-build-test-develop.sh
+        environment:
+            MYSQL_HOST: "mysqldb"
+            POSTGRESQL_HOST: "postgresdb"
+            REDIS_HOST: "redisdb"
+            MONGODB_HOST: "mongodb"
+            POCO_TEST_POSTGRES_CONN: "DATABASE=postgres;SERVER=postgres;PORT=5432;"
+        depends_on:
+            - mysqldb
+            - redisdb
+            - postgresdb
+            - mongodb
+        networks:
+            - mynet
+
+networks:
+    mynet:
+        driver: bridge

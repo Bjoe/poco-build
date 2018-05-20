@@ -1,7 +1,7 @@
 #!/bin/sh
 
 SRC_DIR=/src/poco
-BUILD_DIR=/build/poco-docker
+BUILD_DIR=~/poco-docker
 CMAKE_EXECUTE="cmake -H$SRC_DIR -B$BUILD_DIR -GNinja -DCMAKE_C_COMPILER=clang-6.0 -DCMAKE_CXX_COMPILER=clang++-6.0" # -DCMAKE_VERBOSE_MAKEFILE=true"
 CUR_DIR=`pwd`
 BUILD_TYPES="Debug Release NONE"
@@ -12,54 +12,54 @@ COMPONENTS_OFF="POCO_ENABLE_CPPUNIT POCO_ENABLE_ENCODINGS POCO_ENABLE_ENCODINGS_
 
 rm -fr $BUILD_DIR
 
-# for BUILD_TYPE in $BUILD_TYPES; do
-#     for WITH_TYPE in $WITH_TYPES; do
-# 	for COPON in $COMPONENTS_ON; do
-# 	    for COPOFF in $COMPONENTS_OFF; do
-# 		if [ "$COPON" = "$COPOFF" ]; then
-# 		    COMPONENT="$COMPONENT -D$COPON=ON"
-# 		    COPON="-"
-# 		else
-# 		    COMPONENT="$COMPONENT -D$COPOFF=OFF"
-# 		fi
-# 	    done
-# 	    if [ "$BUILD_TYPE" != "NONE" ]; then
-# 		CMAKE_PARAMETER="-DCMAKE_BUILD_TYPE=$BUILD_TYPE"
-# 	    fi
-# 	    if [ "$WITH_TYPE" != "NONE" ]; then
-# 		CMAKE_PARAMETER="$CMAKE_PARAMETER -D$WITH_TYPE=ON"
-# 	    fi
-# 	    CMAKE_PARAMETER="$CMAKE_PARAMETER $COMPONENT"
-# 	    echo "cmake execution: $CMAKE_EXECUTE $CMAKE_PARAMETER && cmake --build $BUILD_DIR --target all && cd $BUILD_DIR && POCO_BASE=$SRC_DIR ctest --output-on-failure"
-# 	    $CMAKE_EXECUTE $CMAKE_PARAMETER && cmake --build $BUILD_DIR --target all #&& cd $BUILD_DIR && POCO_BASE=$SRC_DIR ctest --output-on-failure
-# 	    cd $CUR_DIR
-# 	    rm -fr $BUILD_DIR
-# 	    COMPONENT=""
-# 	    CMAKE_PARAMETER=""
-# 	done    
-#     done
-# done
-#  
-# for BUILD_TYPE in $BUILD_TYPES; do
-#     for WITH_TYPE in $WITH_TYPES; do
-# 	for COPOFF in $COMPONENTS_OFF; do
-# 	    COMPONENT="$COMPONENT -D$COPOFF=OFF"
-# 	done
-# 	if [ "$BUILD_TYPE" != "NONE" ]; then
-# 	    CMAKE_PARAMETER="-DCMAKE_BUILD_TYPE=$BUILD_TYPE"
-# 	fi
-# 	if [ "$WITH_TYPE" != "NONE" ]; then
-# 	    CMAKE_PARAMETER="$CMAKE_PARAMETER -D$WITH_TYPE=ON"
-# 	fi
-# 	CMAKE_PARAMETER="$CMAKE_PARAMETER $COMPONENT"
-# 	echo "cmake execution: $CMAKE_EXECUTE $CMAKE_PARAMETER && cmake --build $BUILD_DIR --target all && cd $BUILD_DIR && POCO_BASE=$SRC_DIR ctest --output-on-failure"
-# 	$CMAKE_EXECUTE $CMAKE_PARAMETER && cmake --build $BUILD_DIR --target all #&& cd $BUILD_DIR && POCO_BASE=$SRC_DIR ctest --output-on-failure
-# 	cd $CUR_DIR
-# 	rm -fr $BUILD_DIR
-# 	COMPONENT=""
-# 	CMAKE_PARAMETER=""
-#     done
-# done
+for BUILD_TYPE in $BUILD_TYPES; do
+    for WITH_TYPE in $WITH_TYPES; do
+	for COPON in $COMPONENTS_ON; do
+	    for COPOFF in $COMPONENTS_OFF; do
+		if [ "$COPON" = "$COPOFF" ]; then
+		    COMPONENT="$COMPONENT -D$COPON=ON"
+		    COPON="-"
+		else
+		    COMPONENT="$COMPONENT -D$COPOFF=OFF"
+		fi
+	    done
+	    if [ "$BUILD_TYPE" != "NONE" ]; then
+		CMAKE_PARAMETER="-DCMAKE_BUILD_TYPE=$BUILD_TYPE"
+	    fi
+	    if [ "$WITH_TYPE" != "NONE" ]; then
+		CMAKE_PARAMETER="$CMAKE_PARAMETER -D$WITH_TYPE=ON"
+	    fi
+	    CMAKE_PARAMETER="$CMAKE_PARAMETER $COMPONENT"
+	    echo "cmake execution: $CMAKE_EXECUTE $CMAKE_PARAMETER && cmake --build $BUILD_DIR --target all && cd $BUILD_DIR && POCO_BASE=$SRC_DIR ctest --output-on-failure"
+	    $CMAKE_EXECUTE $CMAKE_PARAMETER && cmake --build $BUILD_DIR --target all #&& cd $BUILD_DIR && POCO_BASE=$SRC_DIR ctest --output-on-failure
+	    cd $CUR_DIR
+	    rm -fr $BUILD_DIR
+	    COMPONENT=""
+	    CMAKE_PARAMETER=""
+	done    
+    done
+done
+ 
+for BUILD_TYPE in $BUILD_TYPES; do
+    for WITH_TYPE in $WITH_TYPES; do
+	for COPOFF in $COMPONENTS_OFF; do
+	    COMPONENT="$COMPONENT -D$COPOFF=OFF"
+	done
+	if [ "$BUILD_TYPE" != "NONE" ]; then
+	    CMAKE_PARAMETER="-DCMAKE_BUILD_TYPE=$BUILD_TYPE"
+	fi
+	if [ "$WITH_TYPE" != "NONE" ]; then
+	    CMAKE_PARAMETER="$CMAKE_PARAMETER -D$WITH_TYPE=ON"
+	fi
+	CMAKE_PARAMETER="$CMAKE_PARAMETER $COMPONENT"
+	echo "cmake execution: $CMAKE_EXECUTE $CMAKE_PARAMETER && cmake --build $BUILD_DIR --target all && cd $BUILD_DIR && POCO_BASE=$SRC_DIR ctest --output-on-failure"
+	$CMAKE_EXECUTE $CMAKE_PARAMETER && cmake --build $BUILD_DIR --target all #&& cd $BUILD_DIR && POCO_BASE=$SRC_DIR ctest --output-on-failure
+	cd $CUR_DIR
+	rm -fr $BUILD_DIR
+	COMPONENT=""
+	CMAKE_PARAMETER=""
+    done
+done
 
 for BUILD_TYPE in $BUILD_TYPES; do
     for WITH_TYPE in $WITH_TYPES; do

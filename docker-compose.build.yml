@@ -1,0 +1,7 @@
+version: '2'
+
+services:
+    build:
+        volumes:
+            - ".:/src"
+        entrypoint: /src/bin-build/docker-build-test-develop.sh

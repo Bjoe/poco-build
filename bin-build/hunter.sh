@@ -1,7 +1,7 @@
 #!/bin/sh -x
 
-SRC_DIR=/src
-BUILD_DIR=/build/poco-docker-hunter
+SRC_DIR=/src/poco
+BUILD_DIR=~/poco-docker-hunter
 
 #-DCMAKE_BUILD_TYPE=Debug 
 # cmake -H$SRC_DIR -B$BUILD_DIR -GNinja \

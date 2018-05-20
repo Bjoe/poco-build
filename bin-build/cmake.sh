@@ -1,7 +1,7 @@
 #!/bin/sh -x
 
-SRC_DIR=/src
-BUILD_DIR=/build/poco-docker
+SRC_DIR=/src/poco
+BUILD_DIR=~/poco-docker
 
 #-DCMAKE_BUILD_TYPE=Debug 
 # cmake -H$SRC_DIR -B$BUILD_DIR -GNinja \

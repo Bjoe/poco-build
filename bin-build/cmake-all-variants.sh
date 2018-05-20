@@ -1,7 +1,7 @@
 #!/bin/sh
 
 SRC_DIR=/src/poco
-BUILD_DIR=/build/poco-docker
+BUILD_DIR=~/poco-docker
 CMAKE_EXECUTE="cmake -H$SRC_DIR -B$BUILD_DIR -GNinja -DCMAKE_C_COMPILER=clang-6.0 -DCMAKE_CXX_COMPILER=clang++-6.0 "
 CUR_DIR=`pwd`
 BUILD_TYPES="Debug Release NONE"
