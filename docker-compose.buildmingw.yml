@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+    buildmingw:
+        volumes:
+            - ".:/src"
+            - "/home/joerg/Development/cmake-tools:/cmake-tools"
+        entrypoint: /src/bin-build/cmake-mingw.sh

@@ -4,4 +4,4 @@ services:
     build:
         volumes:
             - ".:/src"
-        entrypoint: /src/bin-build/docker-build-test-develop.sh
+        entrypoint: /src/bin-build/cmake.sh
