@@ -42,7 +42,7 @@ services:
             - mynet
 
     buildthirdparty:
-        image: ubuntu-build-thirdparty:1.0
+        image: ubuntu-build-poco:latest
         #volumes:
             #- "${SRC_DIR}:/src"
             #- "${BUILD_DIR}:/build"
@@ -61,28 +61,28 @@ services:
         networks:
             - mynet
 
-    buildthirdpartyiodbc:
-        image: ubuntu-build-thirdparty_with_iodbc:1.0
-        #volumes:
-            #- "${SRC_DIR}:/src"
-            #- "${BUILD_DIR}:/build"
-        #entrypoint: /src/bin-build/cmake-all-variants-develop.sh
-        environment:
-            MYSQL_HOST: "mysqldb"
-            POSTGRESQL_HOST: "postgresdb"
-            REDIS_HOST: "redisdb"
-            MONGODB_HOST: "mongodb"
-            POCO_TEST_POSTGRES_CONN: "DATABASE=postgres;SERVER=postgres;PORT=5432;"
-        depends_on:
-            - mysqldb
-            - redisdb
-            - postgresdb
-            - mongodb
-        networks:
-            - mynet
+#    buildthirdpartyiodbc:
+#           image: ubuntu-build-poco-with_iodbc:latest
+#        #volumes:
+#            #- "${SRC_DIR}:/src"
+#            #- "${BUILD_DIR}:/build"
+#        #entrypoint: /src/bin-build/cmake-all-variants-develop.sh
+#        environment:
+#            MYSQL_HOST: "mysqldb"
+#            POSTGRESQL_HOST: "postgresdb"
+#            REDIS_HOST: "redisdb"
+#            MONGODB_HOST: "mongodb"
+#            POCO_TEST_POSTGRES_CONN: "DATABASE=postgres;SERVER=postgres;PORT=5432;"
+#        depends_on:
+#            - mysqldb
+#            - redisdb
+#            - postgresdb
+#            - mongodb
+#        networks:
+#            - mynet
 
     buildandroidndk:
-        image: ubuntu-build-android:1.0
+        image: ubuntu-build-android:latest
         #volumes:
             #- "${SRC_DIR}:/src"
             #- "${BUILD_DIR}:/build"
@@ -101,24 +101,24 @@ services:
         networks:
             - mynet
     
-    buildmingw:
-        image: ubuntu-build-mingw:1.0
-        environment:
-            MYSQL_HOST: "mysqldb"
-            POSTGRESQL_HOST: "postgresdb"
-            REDIS_HOST: "redisdb"
-            MONGODB_HOST: "mongodb"
-            POCO_TEST_POSTGRES_CONN: "DATABASE=postgres;SERVER=postgres;PORT=5432;"
-        depends_on:
-            - mysqldb
-            - redisdb
-            - postgresdb
-            - mongodb
-        networks:
-            - mynet
+#    buildmingw:
+#        image: ubuntu-build-mingw:latest
+#        environment:
+#            MYSQL_HOST: "mysqldb"
+#            POSTGRESQL_HOST: "postgresdb"
+#            REDIS_HOST: "redisdb"
+#            MONGODB_HOST: "mongodb"
+#            POCO_TEST_POSTGRES_CONN: "DATABASE=postgres;SERVER=postgres;PORT=5432;"
+#        depends_on:
+#            - mysqldb
+#            - redisdb
+#            - postgresdb
+#            - mongodb
+#        networks:
+#            - mynet
 
     build:
-        image: ubuntu-build:1.0
+        image: ubuntu-build:latest
         #volumes:
             #- "${SRC_DIR}:/src"
             #- "${BUILD_DIR}:/build"
