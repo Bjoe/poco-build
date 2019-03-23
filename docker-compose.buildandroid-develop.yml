@@ -2,6 +2,20 @@ version: '2'
 
 services:
     buildandroidndk:
+        image: ubuntu-build-android:latest
         volumes:
             - ".:/src"
         entrypoint: /src/bin-build/android-develop.sh
+        environment:
+            MYSQL_HOST: "mysqldb"
+            POSTGRESQL_HOST: "postgresdb"
+            REDIS_HOST: "redisdb"
+            MONGODB_HOST: "mongodb"
+            POCO_TEST_POSTGRES_CONN: "DATABASE=postgres;SERVER=postgres;PORT=5432;"
+        depends_on:
+            - mysqldb
+            - redisdb
+            - postgresdb
+            - mongodb
+        networks:
+            - mynet
