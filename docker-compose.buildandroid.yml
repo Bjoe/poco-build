@@ -4,8 +4,8 @@ services:
     buildandroidndk:
         image: ubuntu-build-android:latest
         volumes:
-            - ".:/src"
-        entrypoint: /src/bin-build/android.sh
+            - ".:/source"
+        entrypoint: /src/bin-build/android-arm64.sh
         environment:
             MYSQL_HOST: "mysqldb"
             POSTGRESQL_HOST: "postgresdb"
