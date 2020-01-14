@@ -1,4 +1,4 @@
-version: '2'
+version: '3.6'
 
 services:
     build-poco-plain:
@@ -57,12 +57,12 @@ services:
 
     ide-poco:
         build:
-        context: .
-        dockerfile: Docker-creator-file
-        args:
-            dockerimage: bojoe/poco-build-env-ubuntu:latest
+            context: .
+            dockerfile: Docker-creator-file
+            args:
+                dockerimage: bojoe/poco-build-env-ubuntu:latest
         container_name: dev-cpp-poco-ide
-        network_mode: "host"
+        #network_mode: "host"
         privileged: true
         security_opt:
         - seccomp=unconfined
@@ -93,12 +93,12 @@ services:
 
     ide-poco-android:
         build:
-        context: .
-        dockerfile: Docker-creator-file
-        args:
-            dockerimage: bojoe/cpp-android-ndk-build-env-ubuntu:latest
+            context: .
+            dockerfile: Docker-creator-file
+            args:
+                dockerimage: bojoe/cpp-android-ndk-build-env-ubuntu:latest
         container_name: dev-cpp-poco-ide-android
-        network_mode: "host"
+        #network_mode: "host"
         privileged: true
         security_opt:
         - seccomp=unconfined
