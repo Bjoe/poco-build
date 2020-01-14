@@ -1,10 +1,132 @@
 version: '2'
 
-# SRC_DIR=.../Src BUILD_DIR=~/Build docker-compose -f DockerImages/docker-compose.yml run buildthirdparty bash
-
-#env_file: env/build.env
-
 services:
+    build-poco-plain:
+        image: bojoe/cpp-build-env-ubuntu:latest
+        volumes:
+            - ".:/src"
+        environment:
+            MYSQL_HOST: "mysqldb"
+            POSTGRESQL_HOST: "postgresdb"
+            REDIS_HOST: "redisdb"
+            MONGODB_HOST: "mongodb"
+            POCO_TEST_POSTGRES_CONN: "DATABASE=postgres;SERVER=postgres;PORT=5432;"
+        depends_on:
+            - mysqldb
+            - redisdb
+            - postgresdb
+            - mongodb
+        networks:
+            - mynet
+
+    build-poco:
+        image: bojoe/poco-build-env-ubuntu:latest
+        volumes:
+            - ".:/src"
+        environment:
+            MYSQL_HOST: "mysqldb"
+            POSTGRESQL_HOST: "postgresdb"
+            REDIS_HOST: "redisdb"
+            MONGODB_HOST: "mongodb"
+            POCO_TEST_POSTGRES_CONN: "DATABASE=postgres;SERVER=postgres;PORT=5432;"
+        depends_on:
+            - mysqldb
+            - redisdb
+            - postgresdb
+            - mongodb
+        networks:
+            - mynet
+
+    build-poco-android:
+        image: bojoe/cpp-android-ndk-build-env-ubuntu:latest
+        volumes:
+            - ".:/src"
+        environment:
+            MYSQL_HOST: "mysqldb"
+            POSTGRESQL_HOST: "postgresdb"
+            REDIS_HOST: "redisdb"
+            MONGODB_HOST: "mongodb"
+            POCO_TEST_POSTGRES_CONN: "DATABASE=postgres;SERVER=postgres;PORT=5432;"
+        depends_on:
+            - mysqldb
+            - redisdb
+            - postgresdb
+            - mongodb
+        networks:
+            - mynet
+
+    ide-poco:
+        build:
+        context: .
+        dockerfile: Docker-creator-file
+        args:
+            dockerimage: bojoe/poco-build-env-ubuntu:latest
+        container_name: dev-cpp-poco-ide
+        network_mode: "host"
+        privileged: true
+        security_opt:
+        - seccomp=unconfined
+        cap_add:
+        - SYS_PTRACE
+        devices:
+        - /dev/dri:/dev/dri
+        environment:
+        - SSH_AUTH_SOCK=$SSH_AUTH_SOCK
+        - DISPLAY=$DISPLAY
+        - MYSQL_HOST=mysqldb
+        - POSTGRESQL_HOST=postgresdb
+        - REDIS_HOST=redisdb
+        - MONGODB_HOST=mongodb
+        - POCO_TEST_POSTGRES_CONN="DATABASE=postgres;SERVER=postgres;PORT=5432;"
+        volumes:
+        - /dev/bus/usb:/dev/bus/usb
+        - $HOME:/home/developer
+        - $HOME:/home/$USER
+        - /tmp:/tmp
+        depends_on:
+            - mysqldb
+            - redisdb
+            - postgresdb
+            - mongodb
+        networks:
+            - mynet
+
+    ide-poco-android:
+        build:
+        context: .
+        dockerfile: Docker-creator-file
+        args:
+            dockerimage: bojoe/cpp-android-ndk-build-env-ubuntu:latest
+        container_name: dev-cpp-poco-ide-android
+        network_mode: "host"
+        privileged: true
+        security_opt:
+        - seccomp=unconfined
+        cap_add:
+        - SYS_PTRACE
+        devices:
+        - /dev/dri:/dev/dri
+        environment:
+        - SSH_AUTH_SOCK=$SSH_AUTH_SOCK
+        - DISPLAY=$DISPLAY
+        - MYSQL_HOST=mysqldb
+        - POSTGRESQL_HOST=postgresdb
+        - REDIS_HOST=redisdb
+        - MONGODB_HOST=mongodb
+        - POCO_TEST_POSTGRES_CONN="DATABASE=postgres;SERVER=postgres;PORT=5432;"
+        volumes:
+        - /dev/bus/usb:/dev/bus/usb
+        - $HOME:/home/developer
+        - $HOME:/home/$USER
+        - /tmp:/tmp
+        depends_on:
+            - mysqldb
+            - redisdb
+            - postgresdb
+            - mongodb
+        networks:
+            - mynet
+
     mysqldb:
         image: mysql:5.6
         environment:

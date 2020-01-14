@@ -1,6 +1,3 @@
-[submodule "DockerImages"]
-	path = DockerImages
-	url = git@github.com:Bjoe/DockerImages.git
 [submodule "poco"]
 	path = poco
 	url = git@github.com:Bjoe/poco.git
