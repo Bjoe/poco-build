@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorSession>
-<!-- Written by QtCreator 4.11.2, 2020-04-03T22:19:31. -->
+<!-- Written by QtCreator 4.11.2, 2020-04-03T23:00:37. -->
 <qtcreator>
  <data>
   <variable>CascadeSetActive</variable>
@@ -12,7 +12,7 @@
  </data>
  <data>
   <variable>EditorSettings</variable>
-  <value type="QByteArray">AAAAD0VkaXRvck1hbmFnZXJWNQAAAAIAAAC6AC8AaABvAG0AZQAvAGoAYgBvAGUAaABtAGUALwBvAHAAdAAvAFEAdAAvAEUAeABhAG0AcABsAGUAcwAvAFEAdAAtADUALgAxADQALgAxAC8AcQB1AGkAYwBrAGMAbwBuAHQAcgBvAGwAcwAvAGQAaQBhAGwAbwBnAHMALwBzAHkAcwB0AGUAbQBkAGkAYQBsAG8AZwBzAC8AcwB5AHMAdABlAG0AZABpAGEAbABvAGcAcwAuAHEAbQBsAAAADAAAAAAcAAAAAQAAAAAAAAAAAAAAAQAAAAEAAAABAAAAAAAAAKgALwBoAG8AbQBlAC8AagBiAG8AZQBoAG0AZQAvAG8AcAB0AC8AUQB0AC8ARQB4AGEAbQBwAGwAZQBzAC8AUQB0AC0ANQAuADEANAAuADEALwBxAHUAaQBjAGsAYwBvAG4AdAByAG8AbABzAC8AZABpAGEAbABvAGcAcwAvAHMAeQBzAHQAZQBtAGQAaQBhAGwAbwBnAHMALwBtAGEAaQBuAC4AYwBwAHAAAAAMAAAAABwAAAABAAAAAAAAAAAAAAABAAAAAQAAAAEAAAAAAAAAAgAAAKgALwBoAG8AbQBlAC8AagBiAG8AZQBoAG0AZQAvAG8AcAB0AC8AUQB0AC8ARQB4AGEAbQBwAGwAZQBzAC8AUQB0AC0ANQAuADEANAAuADEALwBxAHUAaQBjAGsAYwBvAG4AdAByAG8AbABzAC8AZABpAGEAbABvAGcAcwAvAHMAeQBzAHQAZQBtAGQAaQBhAGwAbwBnAHMALwBtAGEAaQBuAC4AYwBwAHAAAAAQAG0AYQBpAG4ALgBjAHAAcAAAABNDcHBFZGl0b3IuQysrRWRpdG9yAAAAALoALwBoAG8AbQBlAC8AagBiAG8AZQBoAG0AZQAvAG8AcAB0AC8AUQB0AC8ARQB4AGEAbQBwAGwAZQBzAC8AUQB0AC0ANQAuADEANAAuADEALwBxAHUAaQBjAGsAYwBvAG4AdAByAG8AbABzAC8AZABpAGEAbABvAGcAcwAvAHMAeQBzAHQAZQBtAGQAaQBhAGwAbwBnAHMALwBzAHkAcwB0AGUAbQBkAGkAYQBsAG8AZwBzAC4AcQBtAGwAAAAiAHMAeQBzAHQAZQBtAGQAaQBhAGwAbwBnAHMALgBxAG0AbAAAABdRbWxKU0VkaXRvci5RTUxKU0VkaXRvcgAAAAEhAAAADWN1cnJlbnRlZGl0b3IAAAC6AC8AaABvAG0AZQAvAGoAYgBvAGUAaABtAGUALwBvAHAAdAAvAFEAdAAvAEUAeABhAG0AcABsAGUAcwAvAFEAdAAtADUALgAxADQALgAxAC8AcQB1AGkAYwBrAGMAbwBuAHQAcgBvAGwAcwAvAGQAaQBhAGwAbwBnAHMALwBzAHkAcwB0AGUAbQBkAGkAYQBsAG8AZwBzAC8AcwB5AHMAdABlAG0AZABpAGEAbABvAGcAcwAuAHEAbQBsAAAALgBRAG0AbABKAFMARQBkAGkAdABvAHIALgBRAE0ATABKAFMARQBkAGkAdABvAHIAAAAcAAAAAQAAAAAAAAAAAAAAAQAAAAEAAAABAAAAAAAAAAA=</value>
+  <value type="QByteArray">AAAAD0VkaXRvck1hbmFnZXJWNQAAAAAAAAAAAAAACQAAAAVlbXB0eQAAAAA=</value>
  </data>
  <data>
   <variable>ProjectDependencies</variable>
@@ -20,7 +20,13 @@
  </data>
  <data>
   <variable>ProjectList</variable>
-  <valuelist type="QVariantList"/>
+  <valuelist type="QVariantList">
+   <value type="QString">/home/developer/poco/CMakeLists.txt</value>
+  </valuelist>
+ </data>
+ <data>
+  <variable>StartupProject</variable>
+  <value type="QString">/home/developer/poco/CMakeLists.txt</value>
  </data>
  <data>
   <variable>value-ActiveMode</variable>
@@ -32,7 +38,12 @@
  </data>
  <data>
   <variable>value-ProjectTree.ExpandData</variable>
-  <valuelist type="QVariantList"/>
+  <valuelist type="QVariantList">
+   <valuelist type="QVariantList">
+    <value type="QString">/home/developer/poco</value>
+    <value type="QString">Poco [master]</value>
+   </valuelist>
+  </valuelist>
  </data>
  <data>
   <variable>value-TaskWindow.Categories</variable>
