@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorToolChains>
-<!-- Written by QtCreator 4.11.2, 2020-04-03T23:00:37. -->
+<!-- Written by QtCreator 4.11.2, 2020-04-04T22:54:52. -->
 <qtcreator>
  <data>
   <variable>ToolChain.0</variable>
@@ -132,131 +132,6 @@
   </valuemap>
  </data>
  <data>
-  <variable>ToolChain.15</variable>
-  <valuemap type="QVariantMap">
-   <value type="QByteArray" key="ProjectExplorer.ClangToolChain.ParentToolChainId"></value>
-   <value type="QString" key="ProjectExplorer.GccToolChain.OriginalTargetTriple">x86_64-linux-android</value>
-   <value type="QString" key="ProjectExplorer.GccToolChain.Path">/opt/androidSdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++</value>
-   <valuelist type="QVariantList" key="ProjectExplorer.GccToolChain.PlatformCodeGenFlags">
-    <value type="QString">-target</value>
-    <value type="QString">x86_64-linux-android</value>
-   </valuelist>
-   <valuelist type="QVariantList" key="ProjectExplorer.GccToolChain.PlatformLinkerFlags">
-    <value type="QString">-target</value>
-    <value type="QString">x86_64-linux-android</value>
-   </valuelist>
-   <valuelist type="QVariantList" key="ProjectExplorer.GccToolChain.SupportedAbis">
-    <value type="QString">x86-linux-android-elf-64bit</value>
-   </valuelist>
-   <value type="QString" key="ProjectExplorer.GccToolChain.TargetAbi">x86-linux-android-elf-64bit</value>
-   <value type="bool" key="ProjectExplorer.ToolChain.Autodetect">true</value>
-   <value type="QString" key="ProjectExplorer.ToolChain.DisplayName">Android Clang (C++, x86_64)</value>
-   <value type="QString" key="ProjectExplorer.ToolChain.Id">Qt4ProjectManager.ToolChain.Android:{d48bcce6-f914-4972-b713-64de99bd1d12}</value>
-   <value type="int" key="ProjectExplorer.ToolChain.Language">2</value>
-   <value type="QString" key="ProjectExplorer.ToolChain.LanguageV2">Cxx</value>
-  </valuemap>
- </data>
- <data>
-  <variable>ToolChain.16</variable>
-  <valuemap type="QVariantMap">
-   <value type="QByteArray" key="ProjectExplorer.ClangToolChain.ParentToolChainId"></value>
-   <value type="QString" key="ProjectExplorer.GccToolChain.OriginalTargetTriple">arm-linux-androideabi</value>
-   <value type="QString" key="ProjectExplorer.GccToolChain.Path">/opt/androidSdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++</value>
-   <valuelist type="QVariantList" key="ProjectExplorer.GccToolChain.PlatformCodeGenFlags">
-    <value type="QString">-target</value>
-    <value type="QString">arm-linux-androideabi</value>
-   </valuelist>
-   <valuelist type="QVariantList" key="ProjectExplorer.GccToolChain.PlatformLinkerFlags">
-    <value type="QString">-target</value>
-    <value type="QString">arm-linux-androideabi</value>
-   </valuelist>
-   <valuelist type="QVariantList" key="ProjectExplorer.GccToolChain.SupportedAbis">
-    <value type="QString">arm-linux-android-elf-32bit</value>
-   </valuelist>
-   <value type="QString" key="ProjectExplorer.GccToolChain.TargetAbi">arm-linux-android-elf-32bit</value>
-   <value type="bool" key="ProjectExplorer.ToolChain.Autodetect">true</value>
-   <value type="QString" key="ProjectExplorer.ToolChain.DisplayName">Android Clang (C++, arm)</value>
-   <value type="QString" key="ProjectExplorer.ToolChain.Id">Qt4ProjectManager.ToolChain.Android:{6d7e04ab-65cf-4131-9b33-a77707ac0bfe}</value>
-   <value type="int" key="ProjectExplorer.ToolChain.Language">2</value>
-   <value type="QString" key="ProjectExplorer.ToolChain.LanguageV2">Cxx</value>
-  </valuemap>
- </data>
- <data>
-  <variable>ToolChain.17</variable>
-  <valuemap type="QVariantMap">
-   <value type="QByteArray" key="ProjectExplorer.ClangToolChain.ParentToolChainId"></value>
-   <value type="QString" key="ProjectExplorer.GccToolChain.OriginalTargetTriple">i686-linux-android</value>
-   <value type="QString" key="ProjectExplorer.GccToolChain.Path">/opt/androidSdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++</value>
-   <valuelist type="QVariantList" key="ProjectExplorer.GccToolChain.PlatformCodeGenFlags">
-    <value type="QString">-target</value>
-    <value type="QString">i686-linux-android</value>
-   </valuelist>
-   <valuelist type="QVariantList" key="ProjectExplorer.GccToolChain.PlatformLinkerFlags">
-    <value type="QString">-target</value>
-    <value type="QString">i686-linux-android</value>
-   </valuelist>
-   <valuelist type="QVariantList" key="ProjectExplorer.GccToolChain.SupportedAbis">
-    <value type="QString">x86-linux-android-elf-32bit</value>
-   </valuelist>
-   <value type="QString" key="ProjectExplorer.GccToolChain.TargetAbi">x86-linux-android-elf-32bit</value>
-   <value type="bool" key="ProjectExplorer.ToolChain.Autodetect">true</value>
-   <value type="QString" key="ProjectExplorer.ToolChain.DisplayName">Android Clang (C++, i686)</value>
-   <value type="QString" key="ProjectExplorer.ToolChain.Id">Qt4ProjectManager.ToolChain.Android:{c9b113b3-633c-44d1-81be-71624c74811f}</value>
-   <value type="int" key="ProjectExplorer.ToolChain.Language">2</value>
-   <value type="QString" key="ProjectExplorer.ToolChain.LanguageV2">Cxx</value>
-  </valuemap>
- </data>
- <data>
-  <variable>ToolChain.18</variable>
-  <valuemap type="QVariantMap">
-   <value type="QByteArray" key="ProjectExplorer.ClangToolChain.ParentToolChainId"></value>
-   <value type="QString" key="ProjectExplorer.GccToolChain.OriginalTargetTriple">aarch64-linux-android</value>
-   <value type="QString" key="ProjectExplorer.GccToolChain.Path">/opt/androidSdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++</value>
-   <valuelist type="QVariantList" key="ProjectExplorer.GccToolChain.PlatformCodeGenFlags">
-    <value type="QString">-target</value>
-    <value type="QString">aarch64-linux-android</value>
-   </valuelist>
-   <valuelist type="QVariantList" key="ProjectExplorer.GccToolChain.PlatformLinkerFlags">
-    <value type="QString">-target</value>
-    <value type="QString">aarch64-linux-android</value>
-   </valuelist>
-   <valuelist type="QVariantList" key="ProjectExplorer.GccToolChain.SupportedAbis">
-    <value type="QString">arm-linux-android-elf-64bit</value>
-   </valuelist>
-   <value type="QString" key="ProjectExplorer.GccToolChain.TargetAbi">arm-linux-android-elf-64bit</value>
-   <value type="bool" key="ProjectExplorer.ToolChain.Autodetect">true</value>
-   <value type="QString" key="ProjectExplorer.ToolChain.DisplayName">Android Clang (C++, aarch64)</value>
-   <value type="QString" key="ProjectExplorer.ToolChain.Id">Qt4ProjectManager.ToolChain.Android:{00faeb7b-4f8c-452b-9149-e604f7e5336f}</value>
-   <value type="int" key="ProjectExplorer.ToolChain.Language">2</value>
-   <value type="QString" key="ProjectExplorer.ToolChain.LanguageV2">Cxx</value>
-  </valuemap>
- </data>
- <data>
-  <variable>ToolChain.19</variable>
-  <valuemap type="QVariantMap">
-   <value type="QByteArray" key="ProjectExplorer.ClangToolChain.ParentToolChainId"></value>
-   <value type="QString" key="ProjectExplorer.GccToolChain.OriginalTargetTriple">x86_64-linux-android</value>
-   <value type="QString" key="ProjectExplorer.GccToolChain.Path">/opt/androidSdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/linux-x86_64/bin/clang</value>
-   <valuelist type="QVariantList" key="ProjectExplorer.GccToolChain.PlatformCodeGenFlags">
-    <value type="QString">-target</value>
-    <value type="QString">x86_64-linux-android</value>
-   </valuelist>
-   <valuelist type="QVariantList" key="ProjectExplorer.GccToolChain.PlatformLinkerFlags">
-    <value type="QString">-target</value>
-    <value type="QString">x86_64-linux-android</value>
-   </valuelist>
-   <valuelist type="QVariantList" key="ProjectExplorer.GccToolChain.SupportedAbis">
-    <value type="QString">x86-linux-android-elf-64bit</value>
-   </valuelist>
-   <value type="QString" key="ProjectExplorer.GccToolChain.TargetAbi">x86-linux-android-elf-64bit</value>
-   <value type="bool" key="ProjectExplorer.ToolChain.Autodetect">true</value>
-   <value type="QString" key="ProjectExplorer.ToolChain.DisplayName">Android Clang (C, x86_64)</value>
-   <value type="QString" key="ProjectExplorer.ToolChain.Id">Qt4ProjectManager.ToolChain.Android:{f679d90e-e094-4653-b077-9b49b631df98}</value>
-   <value type="int" key="ProjectExplorer.ToolChain.Language">1</value>
-   <value type="QString" key="ProjectExplorer.ToolChain.LanguageV2">C</value>
-  </valuemap>
- </data>
- <data>
   <variable>ToolChain.2</variable>
   <valuemap type="QVariantMap">
    <value type="QString" key="ProjectExplorer.GccToolChain.OriginalTargetTriple">avr</value>
@@ -272,81 +147,6 @@
    <value type="QString" key="ProjectExplorer.ToolChain.Id">ProjectExplorer.ToolChain.Gcc:{a05f83a8-ca9c-42f2-9dae-a57103ab9379}</value>
    <value type="int" key="ProjectExplorer.ToolChain.Language">2</value>
    <value type="QString" key="ProjectExplorer.ToolChain.LanguageV2">Cxx</value>
-  </valuemap>
- </data>
- <data>
-  <variable>ToolChain.20</variable>
-  <valuemap type="QVariantMap">
-   <value type="QByteArray" key="ProjectExplorer.ClangToolChain.ParentToolChainId"></value>
-   <value type="QString" key="ProjectExplorer.GccToolChain.OriginalTargetTriple">arm-linux-androideabi</value>
-   <value type="QString" key="ProjectExplorer.GccToolChain.Path">/opt/androidSdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/linux-x86_64/bin/clang</value>
-   <valuelist type="QVariantList" key="ProjectExplorer.GccToolChain.PlatformCodeGenFlags">
-    <value type="QString">-target</value>
-    <value type="QString">arm-linux-androideabi</value>
-   </valuelist>
-   <valuelist type="QVariantList" key="ProjectExplorer.GccToolChain.PlatformLinkerFlags">
-    <value type="QString">-target</value>
-    <value type="QString">arm-linux-androideabi</value>
-   </valuelist>
-   <valuelist type="QVariantList" key="ProjectExplorer.GccToolChain.SupportedAbis">
-    <value type="QString">arm-linux-android-elf-32bit</value>
-   </valuelist>
-   <value type="QString" key="ProjectExplorer.GccToolChain.TargetAbi">arm-linux-android-elf-32bit</value>
-   <value type="bool" key="ProjectExplorer.ToolChain.Autodetect">true</value>
-   <value type="QString" key="ProjectExplorer.ToolChain.DisplayName">Android Clang (C, arm)</value>
-   <value type="QString" key="ProjectExplorer.ToolChain.Id">Qt4ProjectManager.ToolChain.Android:{95a48650-8f73-4e2e-b09f-6db7085f1006}</value>
-   <value type="int" key="ProjectExplorer.ToolChain.Language">1</value>
-   <value type="QString" key="ProjectExplorer.ToolChain.LanguageV2">C</value>
-  </valuemap>
- </data>
- <data>
-  <variable>ToolChain.21</variable>
-  <valuemap type="QVariantMap">
-   <value type="QByteArray" key="ProjectExplorer.ClangToolChain.ParentToolChainId"></value>
-   <value type="QString" key="ProjectExplorer.GccToolChain.OriginalTargetTriple">i686-linux-android</value>
-   <value type="QString" key="ProjectExplorer.GccToolChain.Path">/opt/androidSdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/linux-x86_64/bin/clang</value>
-   <valuelist type="QVariantList" key="ProjectExplorer.GccToolChain.PlatformCodeGenFlags">
-    <value type="QString">-target</value>
-    <value type="QString">i686-linux-android</value>
-   </valuelist>
-   <valuelist type="QVariantList" key="ProjectExplorer.GccToolChain.PlatformLinkerFlags">
-    <value type="QString">-target</value>
-    <value type="QString">i686-linux-android</value>
-   </valuelist>
-   <valuelist type="QVariantList" key="ProjectExplorer.GccToolChain.SupportedAbis">
-    <value type="QString">x86-linux-android-elf-32bit</value>
-   </valuelist>
-   <value type="QString" key="ProjectExplorer.GccToolChain.TargetAbi">x86-linux-android-elf-32bit</value>
-   <value type="bool" key="ProjectExplorer.ToolChain.Autodetect">true</value>
-   <value type="QString" key="ProjectExplorer.ToolChain.DisplayName">Android Clang (C, i686)</value>
-   <value type="QString" key="ProjectExplorer.ToolChain.Id">Qt4ProjectManager.ToolChain.Android:{eb208f98-dfe0-4817-86c8-d8840939580e}</value>
-   <value type="int" key="ProjectExplorer.ToolChain.Language">1</value>
-   <value type="QString" key="ProjectExplorer.ToolChain.LanguageV2">C</value>
-  </valuemap>
- </data>
- <data>
-  <variable>ToolChain.22</variable>
-  <valuemap type="QVariantMap">
-   <value type="QByteArray" key="ProjectExplorer.ClangToolChain.ParentToolChainId"></value>
-   <value type="QString" key="ProjectExplorer.GccToolChain.OriginalTargetTriple">aarch64-linux-android</value>
-   <value type="QString" key="ProjectExplorer.GccToolChain.Path">/opt/androidSdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/linux-x86_64/bin/clang</value>
-   <valuelist type="QVariantList" key="ProjectExplorer.GccToolChain.PlatformCodeGenFlags">
-    <value type="QString">-target</value>
-    <value type="QString">aarch64-linux-android</value>
-   </valuelist>
-   <valuelist type="QVariantList" key="ProjectExplorer.GccToolChain.PlatformLinkerFlags">
-    <value type="QString">-target</value>
-    <value type="QString">aarch64-linux-android</value>
-   </valuelist>
-   <valuelist type="QVariantList" key="ProjectExplorer.GccToolChain.SupportedAbis">
-    <value type="QString">arm-linux-android-elf-64bit</value>
-   </valuelist>
-   <value type="QString" key="ProjectExplorer.GccToolChain.TargetAbi">arm-linux-android-elf-64bit</value>
-   <value type="bool" key="ProjectExplorer.ToolChain.Autodetect">true</value>
-   <value type="QString" key="ProjectExplorer.ToolChain.DisplayName">Android Clang (C, aarch64)</value>
-   <value type="QString" key="ProjectExplorer.ToolChain.Id">Qt4ProjectManager.ToolChain.Android:{4f8db1e3-f842-4ba1-8282-4bfe7b4a2db0}</value>
-   <value type="int" key="ProjectExplorer.ToolChain.Language">1</value>
-   <value type="QString" key="ProjectExplorer.ToolChain.LanguageV2">C</value>
   </valuemap>
  </data>
  <data>
@@ -477,7 +277,7 @@
  </data>
  <data>
   <variable>ToolChain.Count</variable>
-  <value type="int">23</value>
+  <value type="int">15</value>
  </data>
  <data>
   <variable>Version</variable>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorDevices>
-<!-- Written by QtCreator 4.11.2, 2020-04-03T23:00:37. -->
+<!-- Written by QtCreator 4.11.2, 2020-04-04T22:54:52. -->
 <qtcreator>
  <data>
   <variable>DeviceManager</variable>
@@ -21,25 +21,6 @@
      <value type="QString" key="KeyFile"></value>
      <value type="int" key="Origin">1</value>
      <value type="QString" key="OsType">Desktop</value>
-     <value type="QString" key="PeripheralDescriptionFileKey"></value>
-     <value type="QString" key="QmlsceneKey"></value>
-     <value type="int" key="SshPort">0</value>
-     <value type="int" key="Timeout">0</value>
-     <value type="int" key="Type">0</value>
-     <value type="QString" key="Uname"></value>
-     <value type="int" key="Version">0</value>
-    </valuemap>
-    <valuemap type="QVariantMap">
-     <value type="int" key="Authentication">0</value>
-     <value type="QString" key="DebugServerKey"></value>
-     <valuemap type="QVariantMap" key="ExtraData"/>
-     <value type="QString" key="FreePortsSpec">10000-10100</value>
-     <value type="QString" key="Host"></value>
-     <value type="int" key="HostKeyChecking">2</value>
-     <value type="QString" key="InternalId">Android Device</value>
-     <value type="QString" key="KeyFile"></value>
-     <value type="int" key="Origin">1</value>
-     <value type="QString" key="OsType">Android.Device.Type</value>
      <value type="QString" key="PeripheralDescriptionFileKey"></value>
      <value type="QString" key="QmlsceneKey"></value>
      <value type="int" key="SshPort">0</value>
